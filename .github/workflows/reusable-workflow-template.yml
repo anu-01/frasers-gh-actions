@@ -1,8 +1,6 @@
 name: 04- Call Reusable workflow
 
 on: 
- push:
-  branches: [main]
   
  workflow_dispatch:
  
