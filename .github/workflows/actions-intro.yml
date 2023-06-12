@@ -1,0 +1,27 @@
+name: 01 Github Actions Demo
+
+on:
+  push:
+    branches: ["main"]
+    
+  workflow_dispatch:
+  
+jobs:
+  Explore-GH-Actions:
+      runs-on: ubuntu-latest    
+     
+      steps:
+        - run: echo "Job triggered by a ${{ github.event_name }} event "
+        - run: echo "Job triggered by a ${{ runner.os }} server hosted by GH "
+        - run: echo "Job triggered by a ${{ github.ref }} branch "
+        - name: check out repo
+          uses: actions/checkout@v3
+        - name: list files in repo
+          run: |
+            ls ${{ github.workspace }}
+            echo " files listed"
+            
+        - name: Markdown example
+          run: echo " ~ Hello world" >> $GITHUB_STEP_SUMMARY
+
+      
