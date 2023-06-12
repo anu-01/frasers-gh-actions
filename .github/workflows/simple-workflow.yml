@@ -1,0 +1,38 @@
+name: 02-. Simple workflow
+on:
+  push:
+    branches: [main]
+    
+  workflow_dispatch:
+  
+jobs:
+  build:
+    name: Build simple workflow
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+          
+      - name: display path
+        run: echo ${env:PATH}
+        shell: pwsh
+        
+      - name: display path
+        run: echo ${env:PATH}
+        shell: bash
+        
+  container-example:
+      name: container
+      runs-on: ubuntu-latest
+      container: 
+        image: node:14.15.0-alpine3.12
+        
+      steps:
+        - name: Run inside container
+          run: |
+            node -v
+            echo "Hello from container"
+          
+      
