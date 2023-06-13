@@ -1,4 +1,4 @@
-name: Self-Hosted Runners Hello
+name: 06 Self-Hosted Runners Hello
 
 on:
   workflow_dispatch:
