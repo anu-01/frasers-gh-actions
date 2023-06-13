@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: ./.github/actions/hello-world-composite
-      - id: hello-world
+        id: hello-world
         with:
           who-to-greet: 'Frasers Group from composite action'
           
