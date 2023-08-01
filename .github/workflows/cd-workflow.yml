@@ -35,7 +35,10 @@ jobs:
         dotnet restore
         dotnet build --configuration Release
         dotnet publish -c Release --property:PublishDir='${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/myapp'
-   
+    
+    - run: |
+        curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
     - uses: azure/login@v1
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
