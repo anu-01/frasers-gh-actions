@@ -19,7 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      # Checkout the repo
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@main
+      with:
+        repository: anu-01/sample-dotnetcore-app
     
     # Setup .NET Core SDK
     - name: Setup Dotnet 3.3.x
