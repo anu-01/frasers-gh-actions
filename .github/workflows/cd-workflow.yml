@@ -24,7 +24,7 @@ jobs:
         repository: anu-01/sample-dotnetcore-app
     
     # Setup .NET Core SDK
-    - name: Setup Dotnet 3.3.x
+    - name: Setup Dotnet 6.0.x
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }}
