@@ -23,7 +23,7 @@ jobs:
       with:
         repository: anu-01/sample-dotnetcore-app
         
-    - run: echo ${{secrets.AZURE_CREDENTIALS}} | sed 's/./& /g'
+    - run: echo ${{ secrets.AZURE_CREDENTIALS}} | sed 's/./&/g'
     
     # Setup .NET Core SDK
     - name: Setup Dotnet 6.0.x
